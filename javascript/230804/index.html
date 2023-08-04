@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .board {
+            width: 600px;
+            font-size: 12px;
+            border-collapse: collapse;
+        }
+
+        .board > thead {
+            background: #333;
+            color: #fff;
+        }
+
+        .board > thead > tr > th {
+            padding: 4px 7px;
+        }
+
+        .board > tbody {
+            font-size: 12px;
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .board > tbody > tr > td {
+            padding: 4px 7px;
+        }
+
+        .board > tbody > tr > td:nth-child(2) {
+            text-align: left;
+        }
+    </style>
+
+    <body>
+        <h2>게시판</h2>
+        <table class="board">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                    <th>번호</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </body>
+    <script type="text/javascript" src="./list.js"></script>
+</html>
