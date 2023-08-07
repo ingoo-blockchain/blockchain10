@@ -120,3 +120,44 @@ window.setTimeout(() => {
     }, 2000)
 }, 1000)
 ```
+
+문제
+`실행` 에 대한 문제입니다.
+
+```js
+function inner() {
+    console.log(3, this)
+    const outer = () => {
+        console.log(2, this)
+        const hello = () => {
+            console.log(4, this)
+        }
+        hello()
+    }
+    outer()
+    return () => {
+        console.log(1, this)
+    }
+}
+const fn = inner.call({ name: "ingoo" })
+fn()
+```
+
+문제 2.
+
+```js
+const 아반떼 = () => {}
+const 소나타 = () => {}
+const 제네시스 = () => {}
+
+자동차경주
+1초 뒤에 제네시스 go
+2초 뒤에 소나타 go
+3초 뒤에 아반떼 go
+아반떼가 go가되었으면 마지막에 끝 이라는출력도 되어야합니다.
+
+3초 뒤에 제네시스 go
+2초 뒤에 아반떼 go
+1초 뒤에 소나타 go
+소나타 go 되면 마지막에 끝이라는 출력도 되어야합니다.
+```
