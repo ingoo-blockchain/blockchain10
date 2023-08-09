@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="../public/css/index.css" rel="stylesheet" type="text/css" />
+        <script type="module" src="../public/js/board/wirte.js"></script>
+    </head>
+    <body>
+        <h1><a href="/">Logo</a></h1>
+
+        <h2 class="board-title">글쓰기</h2>
+        <form id="writeform">
+            <ul class="board-write-form">
+                <li>
+                    <span>제목</span>
+                    <input type="text" name="title" />
+                </li>
+                <li>
+                    <span>작성자</span>
+                    <input type="text" name="writer" />
+                </li>
+                <li>
+                    <textarea name="content"></textarea>
+                </li>
+            </ul>
+
+            <button type="submit" class="btn">글작성</button>
+        </form>
+    </body>
+</html>
