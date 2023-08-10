@@ -1,4 +1,4 @@
-import { INITIAL_STORAGE, STORAGE_NAME } from "./constants.js"
+import { INITIAL_STORAGE, STORAGE_NAME, INITIAL_ID, INCREMENT_STEP } from "./constants.js"
 
 class Storage {
     name
@@ -17,6 +17,21 @@ class Storage {
         const storage = this.get()
         const serialize = JSON.stringify([...storage, item])
         localStorage.setItem(this.name, serialize)
+    }
+
+    getLatestItem() {
+        const latestRow = this.get().pop()
+        return latestRow
+    }
+
+    getById(id) {
+        return this.get().find((row) => row.id === parseInt(id))
+    }
+
+    incrementId() {
+        const row = this.getLatestItem()
+        if (!row) return INITIAL_ID
+        return row.id + INCREMENT_STEP
     }
 
     clear() {

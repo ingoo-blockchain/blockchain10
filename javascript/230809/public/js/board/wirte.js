@@ -11,8 +11,10 @@ form.addEventListener("submit", (e) => {
     const writer = e.target.writer.value
     const content = e.target.content.value
 
+    // 마지막 아이템 id + 1
+    const id = storage.incrementId()
     const dataRow = {
-        id: 1,
+        id: id,
         title: title,
         writer: writer,
         content: content,
@@ -21,5 +23,5 @@ form.addEventListener("submit", (e) => {
 
     storage.set(boardRow)
 
-    location.href = `/board/view.html?id=1`
+    location.href = `/board/view.html?id=${id}`
 })
