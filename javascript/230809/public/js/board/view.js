@@ -2,6 +2,7 @@ import { getParams } from "../lib/utils.js"
 import Storage from "../lib/storage.js"
 
 try {
+    // view
     const storage = new Storage()
 
     const { id } = getParams()
@@ -14,6 +15,13 @@ try {
     title.innerHTML = row.title
     writer.innerHTML = row.writer
     content.innerHTML = row.content
+
+    // delete
+    const btn = document.querySelector("#deleteBtn")
+    btn.addEventListener("click", () => {
+        storage.delete(id)
+        location.href = "./list.html"
+    })
 } catch (e) {
     console.log(e.message)
     location.href = "./list.html"

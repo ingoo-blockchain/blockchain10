@@ -19,6 +19,13 @@ class Storage {
         localStorage.setItem(this.name, serialize)
     }
 
+    delete(id) {
+        const storage = this.get()
+        const newStorage = storage.filter((row) => row.id !== parseInt(id))
+        const serialize = JSON.stringify(newStorage)
+        localStorage.setItem(this.name, serialize)
+    }
+
     getLatestItem() {
         const latestRow = this.get().pop()
         return latestRow
