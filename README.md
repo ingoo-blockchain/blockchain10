@@ -6,6 +6,10 @@ README.md 수정
 잘수정했습니다.
 
 
+이름 : 정승교
+블로그주소 : https://chamdom410.tistory.com
+깃헙주소 : https://github.com/tmdry4530
+
 이름 : 강수빈
 블로그 주소: https://devsubinkr.tistory.com/
 깃헙 주소: https://github.com/subinkr
