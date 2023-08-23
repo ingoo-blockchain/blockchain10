@@ -6,6 +6,10 @@ README.md 수정
 잘수정했습니다.
 
 
+이름 : 김보람
+블로그 주소 : https://ppo0127.tistory.com/
+github 주소 : https://github.com/kimboram22
+
 이름 : 정승교
 블로그주소 : https://chamdom410.tistory.com
 깃헙주소 : https://github.com/tmdry4530
@@ -37,3 +41,4 @@ README.md 수정
 이름 : 이은재
 블로그 주소: https://vanitasium.wordpress.com
 깃헙 주소: https://github.com/Solidstate7
+
