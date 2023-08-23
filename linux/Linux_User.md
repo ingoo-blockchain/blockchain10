@@ -83,3 +83,44 @@ $ id
 $ id [user]
 
 ```
+
+## User 생성
+
+-   adduser : 계정 생성하고 [홈디렉토리설정, 쉘설정, 그룹설정]
+-   useradd : 계정만 달랑 생성
+
+sh 설정
+bash -> zsh
+홈디렉토리
+그룹설정
+
+**useradd**
+
+```sh
+useradd [user이름]
+
+$ sudo useradd web7722
+$ sudo passwd web7722
+
+# useradd: Permission denied.
+# useradd: cannot lock /etc/passwd; try again later.
+
+$ vi /etc/passwd
+
+$ id web7722
+
+$ sudo su - web7722
+
+
+$ cat /etc/passwd | grep web7722
+$ sudo mkdir web7722
+
+$ sudo chown 1005 ./web7722
+$ sudo chown 1005:web7722 ./web7722
+
+$ sudo su - web7722
+
+$ exit
+
+$ sudo chmod 755 ./ingoo
+```
