@@ -37,8 +37,10 @@ module.exports = class Item {
 
     getView = () => {
         ++this.#hit
-        return { title: this.#title, writer: this.#writer, content: this.#content }
+        return { id: this.#id, title: this.#title, writer: this.#writer, content: this.#content }
     }
+
+    isThis = (id) => id == this.#id
 
     // increaseHit = () => {
     //     ++this.#hit

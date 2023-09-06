@@ -1,6 +1,14 @@
-module.exports = {
+module.exports = (isError) => ({
     title: "글쓰기",
-    body: `<h2 class="board-title">글쓰기</h2>
+    body: `${
+        isError
+            ? `<script>
+        alert("제대로 입력 안하냐?")
+        location.href = "/write"
+    </script>`
+            : ""
+    }
+    <h2 class="board-title">글쓰기</h2>
         <form id="writeform" action="/write" method="post">
             <ul class="board-write-form">
                 <li>
@@ -18,4 +26,4 @@ module.exports = {
 
             <button type="submit" class="btn">글작성</button>
         </form>`,
-}
+})

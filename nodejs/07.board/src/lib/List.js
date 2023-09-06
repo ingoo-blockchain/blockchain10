@@ -15,4 +15,8 @@ module.exports = class List {
         this.#list.push(new this.#itemClass({ ...item, id: ++this.#id }))
         return true
     }
+
+    getItemById = (id) => this.#list.find((item) => item.isThis(id))
+
+    getItem = (func) => this.#list.find(func)
 }

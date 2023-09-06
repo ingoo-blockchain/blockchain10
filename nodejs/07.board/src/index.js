@@ -4,6 +4,7 @@ const getBasicHTML = require("./views/getBasicHTML")
 const listView = require("./views/list")
 const style = require("./public/css/index")
 const writeView = require("./views/write")
+const viewView = require("./views/view")
 const List = require("./lib/List")
 const Item = require("./lib/Item")
 
@@ -57,13 +58,16 @@ app.get("/style", (req, res) => {
 })
 
 app.get("/write", (req, res) => {
-    res.send(getBasicHTML(writeView))
+    res.send(getBasicHTML(writeView(req.query.error)))
 })
 
 app.post("/write", (req, res) => {
-    console.log(req.body)
     if (board.set(req.body)) res.redirect("/")
-    else res.send("입력 제대로 해")
+    else res.redirect("/write?error=1")
+})
+
+app.get("/view", (req, res) => {
+    res.send(getBasicHTML(viewView(board.getItemById(req.query.id).getView())))
 })
 
 app.listen(8080, () => {
