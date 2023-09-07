@@ -1,0 +1,36 @@
+<!-- Class -->
+<script>
+    const obj = {
+        name: "ingoo",
+    }
+
+    function fn(_name) {
+        // this = {}
+        this.name = _name
+        // return this
+    }
+
+    const obj2 = new fn("ingoo")
+
+    class Fn {
+        constructor(_name) {
+            // this = {}
+            this.name = _name
+            // return this
+        }
+
+        setName(_name) {
+            this.name = _name
+        }
+
+        print() {
+            // this = obj3
+            // console.log(this.name)
+            this.setName("ingoo")
+            console.log(this.name)
+        }
+    }
+
+    const obj3 = new Fn("web7722")
+    obj3.print()
+</script>
