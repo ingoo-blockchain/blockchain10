@@ -12,7 +12,7 @@ server.on("connection", (socket) => {
     socket.on("data", (chunk) => {
         buffer = Buffer.concat([buffer, chunk])
         const request = getRequest(buffer)
-        const response = getResponse(socket, request) // { send: ()=>{} }
+        const response = getResponse(socket, request)
 
         for (const path in staticFile) {
             if (request.uri === path) {

@@ -14,14 +14,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 const board = new List(Item)
-// tempList.set({
-//     num: 1,
-//     title: "CRUD",
-//     writer: "김호현",
-//     created_at: "20230901",
-//     hit: 0,
-//     deleted_at: "20230906",
-// })
+
+// board 인스턴스를 생성했다.
 
 board.set({
     title: "CRUD",
@@ -29,27 +23,7 @@ board.set({
     content: "입력된 값",
 })
 
-// const list = [
-//     {
-//         num: 1,
-//         title: "CRUD",
-//         writer: "김호현",
-//         created_at: "20230901",
-//         hit: 0,
-//         deleted_at: "20230906",
-//     },
-//     {
-//         num: 2,
-//         title: "CRUD1",
-//         writer: "김호현24",
-//         created_at: "202309011",
-//         hit: 5,
-//     },
-// ]
-
-console.log(board.list())
 app.get("/", (req, res) => {
-    // res.send(getBasicHTML({ title: "테스트중", body: "<h1>Test</h1>" }))
     res.send(getBasicHTML(listView(board.list())))
 })
 
@@ -66,6 +40,8 @@ app.post("/write", (req, res) => {
     else res.redirect("/write?error=1")
 })
 
+
+// 어떻게 만들었는지. 
 app.get("/view", (req, res) => {
     res.send(getBasicHTML(viewView(board.getItemById(req.query.id).getView())))
 })
