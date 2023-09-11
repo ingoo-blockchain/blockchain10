@@ -6,6 +6,7 @@ const TEMPLATE_DIR = "views"
 const STATUS_MESSAGE = {
     200: "OK",
     404: "NOT FOUND",
+    302: "FOUND",
 }
 
 class Response {
@@ -62,6 +63,12 @@ class Response {
         }
 
         return headers.join("\r\n")
+    }
+
+    redirect(pathname) {
+        this.setStatus(302)
+        this.setHeaders("Location", pathname)
+        this.end()
     }
 
     sendFile(filename) {

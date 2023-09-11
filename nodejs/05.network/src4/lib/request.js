@@ -7,6 +7,7 @@ class Request {
     headers = {}
     #rawStartLine = ""
     #rawHeaders = []
+    body = null
 
     constructor(buffer) {
         const [headerString, bodyString] = this.getReqeustMessage(buffer)
@@ -17,6 +18,9 @@ class Request {
 
         const headers = this.parseHeaders()
         this.headers = { ...this.headers, ...headers }
+
+        // application/json ,  application/x-www-form-urlencoded
+        this.body = this.parseQueryString(bodyString)
     }
 
     parseStartLine() {
@@ -28,7 +32,33 @@ class Request {
             return acc
         }, {})
 
+        const [pathname, queryString] = this.parseURI(obj.uri)
+        obj.uri = pathname
+
+        const query = this.parseQueryString(queryString)
+        obj.query = query
+
         return obj
+    }
+
+    parseURI(path) {
+        const [pathname, queryString] = path.split("?")
+        return [pathname, queryString]
+    }
+
+    parseQueryString(queryString) {
+        if (!queryString) return null
+
+        const query = queryString
+            .split("&")
+            .map((value) => value.split("="))
+            .reduce((acc, line) => {
+                const [key, value] = line
+                acc[key] = value
+                return acc
+            }, {})
+
+        return query
     }
 
     parseHeaders() {

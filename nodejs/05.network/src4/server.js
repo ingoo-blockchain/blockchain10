@@ -14,11 +14,19 @@ server.on("connection", (socket) => {
         const req = new Request(chunk)
         const res = new Response(socket)
 
-        console.log(req.headers)
-
         // res.setHeaders("Set-Cookie", "token=1234;").send("hello world!")
+        console.log(req.headers.uri) // /boards/list?
 
-        res.sendFile("index.html")
+        if (req.headers.method === "GET" && req.headers.uri === "/boards/list") {
+            res.sendFile("list.html")
+        } else if (req.headers.method === "GET" && req.headers.uri === "/boards/write") {
+            res.sendFile("write.html")
+        } else if (req.headers.method === "POST" && req.headers.uri === "/boards/write") {
+            console.log(req.headers["Content-Type"])
+            console.log(req.body) // writer2=asdfasdf&subject2=asdfasdfasdf&content1=asdfasdfasdf
+
+            // res.redirect("/boards/list")
+        }
     })
 })
 
