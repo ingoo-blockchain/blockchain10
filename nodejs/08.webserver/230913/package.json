@@ -1,0 +1,17 @@
+{
+  "name": "230913",
+  "version": "1.0.0",
+  "description": "어제했던 코드를 그대로 다시쓰는겁니다.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nunjucks": "^3.2.4"
+  }
+}
