@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회수</th>
+            </tr>
+            {% for data in list %}
+            <tr>
+                <td>{{data.id}}</td>
+                <td><a href="/boards/view?id={{data.id}}">{{data.title}}</a></td>
+                <td>{{data.writer}}</td>
+                <td>{{data.created_at}}</td>
+                <td>{{data.hit}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <a href="/boards/write">글쓰기</a>
+    </body>
+</html>
