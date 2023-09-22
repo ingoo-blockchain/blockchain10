@@ -1,0 +1,17 @@
+{
+  "name": "12.jwt_login",
+  "version": "1.0.0",
+  "description": "```json\r {\r     \"alg\": \"HS256\",\r     \"typ\": \"JWT\"\r }\r ```",
+  "main": "header.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.1",
+    "nunjucks": "^3.2.4"
+  }
+}
