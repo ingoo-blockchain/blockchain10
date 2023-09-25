@@ -6,6 +6,7 @@
         <title>Document</title>
     </head>
     <body>
-        잘되나~?asdf <a href="/users/login">로그인</a>
+        {% if user %} {{user.userid}} 님 환영합니다. <a href="/users/logout">로그아웃</a> {% else %} 잘되나~?asdf <a href="/users/login">로그인</a>
+        {% endif %}
     </body>
 </html>

@@ -12,6 +12,20 @@ class JWT {
         return jwt
     }
 
+    verify(token, salt) {
+        try {
+            const [header, payload, signature] = token.split(".")
+            const base64url = [header, payload].join(".")
+            const newSignature = this.createSignature(base64url, salt)
+            if (signature !== newSignature) return null
+
+            const result = this.decode(payload)
+            return result
+        } catch (e) {
+            throw new Error(e.message)
+        }
+    }
+
     encode(obj) {
         return Buffer.from(JSON.stringify(obj)).toString("base64url")
     }
