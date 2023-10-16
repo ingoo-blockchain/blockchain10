@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="public/index.css" />
+        <!-- <script defer src="public/index.js"></script> -->
+        <script type="module" src="public/index2.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <div id="wrapper">
+                <div id="input_box">
+                    <h1 class="count"></h1>
+                    <form id="form" action="#">
+                        <input
+                            required
+                            id="comment"
+                            type="text"
+                            name="comment"
+                            placeholder="댓글을 입력해주세요~!~!~~~!"
+                        />
+                        <button id="button" type="submit">등록</button>
+                    </form>
+                </div>
+
+                <ul id="comment_list"></ul>
+            </div>
+        </div>
+    </body>
+</html>

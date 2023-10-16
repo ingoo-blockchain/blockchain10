@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="./public/css/index.css" rel="stylesheet" type="text/css" />
+        <link href="./public/css/comment.css" rel="stylesheet" type="text/css" />
+        <script type="module" src="./public/js/app.js"></script>
+    </head>
+    <body>
+        <div>
+            <ul class="comment">
+                <li class="comment-form">
+                    <h4>
+                        댓글쓰기
+                        <span>(4)</span>
+                    </h4>
+                    <form id="commentFrm" class="commentFrm">
+                        <span class="ps_box">
+                            <input type="text" placeholder="댓글 내용을 입력해주세요." />
+                        </span>
+                        <button type="submit" class="btn">등록</button>
+                    </form>
+                </li>
+                <li class="comment-list">
+                    <ul class="comment-row" data-index="1">
+                        <li>web7722</li>
+                        <li>
+                            <span>내용입니다.</span>
+                            <span>❌</span>
+                        </li>
+                        <li>2023-10-16</li>
+                    </ul>
+                    <ul class="comment-row" data-index="1">
+                        <li>web7722</li>
+                        <li>
+                            <span>
+                                <input type="text" class="comment-update-input" value="내용입니다." />
+                            </span>
+                            <span class="comment-delete-btn">❌</span>
+                        </li>
+                        <li>2023-10-16</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="app"></div>
+    </body>
+</html>

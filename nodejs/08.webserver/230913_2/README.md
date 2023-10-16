@@ -13,7 +13,7 @@
 -   GET /users/login
 -   GET /users/join
 -   POST /users/login
--   POST /users/login
+-   POST /users/join
 
 # 디렉토리
 
@@ -39,4 +39,12 @@
 npm init -y
 npm install express
 npm install nunjucks
+```
+
+##
+
+글쓰기
+
+```js
+const boards = []
 ```

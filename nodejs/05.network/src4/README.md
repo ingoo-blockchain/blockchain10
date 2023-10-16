@@ -64,3 +64,19 @@ GET https://127.0.0.1:3000/boards/write
 
 Reqeust Message
 Reuqest Method
+
+
+name=ingoo
+
+
+{
+    name:ingoo
+}
+
+
+http://127.0.0.1:3000/boards/list?writer2=asdfasdf&subject2=asdfasdf&content1=asdfasdfasdf
+
+
+Express
+
+

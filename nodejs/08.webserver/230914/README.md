@@ -49,3 +49,10 @@ board.controller.js - 요청, 응답
 board.service.js - 데이터 가공하는 역활
 board.repository.js - 데이터를 저장하는 역활
 board.entity.js - 저장할 데이터의 규격
+
+
+
+view
+
+1. querystring 에있는 id를 가지고
+2. id에 해당하는 데이터를 보여준다

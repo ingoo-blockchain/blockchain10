@@ -59,7 +59,6 @@ Content-Length: 30
 {
     "version":"HTTP/1.1",
     "statusCode": 200,
-    "statusMessage": "OK",
     "headers":{
         "Connection":"Close",
     },
@@ -74,3 +73,23 @@ Content-Length: 30
 
 asdf
 ```
+
+
+## send vs sendFile
+
+send : 매개변수에있는 내용을 그대로
+body에 담아서 보내는
+
+
+sendFile: 특정파일에있는 내용을 버퍼로 읽은다음에, 그내용을 바디로 만들어서 보내는것 
+
+
+1. 파일을 읽는 메서드
+2. 읽은 파일의 내용을 response message를 만드는 코드
+
+
+# readFile
+
+파일경로
+
+경로와 파일명

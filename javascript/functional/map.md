@@ -37,4 +37,6 @@ const map = (callback, arr) => {
     }
     return result
 }
+
+products.map((v) => v.price)
 ```

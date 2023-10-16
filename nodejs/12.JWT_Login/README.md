@@ -115,3 +115,53 @@ A -> 000001
 일주일
 
 input 박스에있는 내용을 controller 받는거
+
+쿠키를 만드는 행위는
+어디서 해야할까요 ? controller
+
+쿠키안에 값을 어떤형태로 만들기로했을까 ?
+Service
+
+controller, service, repository
+
+분류
+
+service에서 Token을 만든다음에
+
+controller에 넘겨가지고,
+값이 정확하게 출력이되는지 확인
+
+로그인이 되었을대
+안되었을 때
+판단하는 근거는
+Token 여부
+
+토큰이 있을때만 User정보를 가져오는것을 구현하기
+없으면 유저정보 X
+
+// token 있는지 없는지 판단가능한가요 ?
+// 만약에 있어
+// 토큰의 유효성 검사
+// db 요청하는거야. payload에있는 id값을 사용해서 하나의 유저정보를 가져오기
+// req.user = db요청한 모든데이터
+
+## AuthMiddleware
+
+1. Token 여부 확인
+
+2. Token 여부가 확인되면, 토큰 유효성 검사
+3. 유효성 검사가 끝나면 payload값에 있는 id를 꺼내온다.
+
+4. 해당 id를 가지고 DB에 요청을 한다.
+
+5. req.user 객체에 DB요청 결과값을 만든다.
+
+401 Unauthorized
+403 Forbidden
+
+## 프로젝트
+
+완성을해야 프로젝트 + 본인 발전이 있어야함.
+팀
+
+프로젝트 관리

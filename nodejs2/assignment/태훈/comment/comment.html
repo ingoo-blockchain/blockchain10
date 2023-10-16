@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시판-댓글구현</title>
+    <link rel="stylesheet" href="./comment.css" />
+    <script
+      src="https://kit.fontawesome.com/a6fe98d160.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./comment.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="body-wrapper">
+      <div class="view-wrapper">
+        <section class="board-view">
+          <div class="board-title">
+            <ul>
+              <li>제목 : 안녕하세요 신규회원 홍길동입니다. (댓글수)</li>
+              <li>조회수 : 63</li>
+              <li>작성일 : 2023-08-22 07:33:21</li>
+            </ul>
+          </div>
+          <div class="board-content">
+            안녕하세요, 여러분! 저는 홍길동이라고 합니다. 오늘 이 게시판에
+            가입한 신규 회원이죠. 몇 년 동안 이 게시판의 활동을 지켜보며 많은
+            것을 배웠고, 이제는 저도 이 커뮤니티에 기여하고 싶어 가입을
+            결심했습니다. 저는 현재 컴퓨터 과학과에 재학 중인 대학생입니다. 특히
+            프로그래밍과 인공지능(Artificial Intelligence)에 큰 관심을 가지고
+            있어요. 그 중에서도 머신 러닝(Machine Learning)과 데이터 분석(Data
+            Analysis)을 좋아합니다. 파이썬(Python)을 주로 사용하는데, 프로그래밍
+            언어에 대한 높은 호불호는 없습니다. 필요한 도구를 선택해서 잘
+            사용하는 것이 중요하다고 생각하거든요. 취미로는 음악 감상과 여행을
+            좋아합니다. 클래식부터 힙합, 팝까지 다양한 장르의 음악을 즐깁니다.
+            특히 음악을 들을 때는 상황과 기분에 따라 선택하는 편이에요. 여행은
+            새로운 문화와 사람들을 경험할 수 있어서 좋아하는데, 코로나19로 인해
+            제한적이지만 앞으로 상황이 좋아지면 다양한 나라를 방문하고 싶습니다.
+            지식 공유와 상호 학습을 중요하게 생각합니다. 지식은 공유될수록
+            가치가 더해진다고 믿거든요. 이 게시판에서도 많은 정보와 지식을
+            공유하면서, 여러분과 함께 성장하고 싶습니다. 언제든지 제 글에 댓글을
+            달아 주시거나 개인 메시지를 보내 주시면 감사하겠습니다. 인터넷은
+            정보와 지식을 넘어서 감정과 생각까지 공유할 수 있는 공간이라고
+            생각합니다. 따라서 저는 이 게시판에서 단순한 정보 교환을 넘어서,
+            실질적인 커뮤니케이션을 통해 다양한 관점과 생각을 배우고 싶습니다.
+            누구든지 제게 조언이나 의견을 주시면 열린 마음으로 받아들이겠습니다.
+            물론 저도 아직 부족한 점이 많습니다. 그럼에도 불구하고 여러분과 함께
+            이 커뮤니티에서 좋은 시간을 보내고 싶습니다. 저의 소개가 다소
+            길었는데, 여기까지 읽어주셔서 감사합니다. 앞으로 잘 부탁드립니다!
+            감사합니다, 홍길동.
+          </div>
+        </section>
+        <section class="comment">
+          <div class="comment-write">
+            <form action="#" class="comment-form">
+              <input
+                type="text"
+                class="comment-author"
+                placeholder="작성자"
+                required
+              />
+              <input
+                type="text"
+                class="comment-content"
+                placeholder="댓글 내용을 입력하세요"
+                required
+              />
+              <button type="submit" class="comment-submit">등록</button>
+            </form>
+          </div>
+          <div class="comment-list">
+            <!-- <div class="comment-entity"></div> -->
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

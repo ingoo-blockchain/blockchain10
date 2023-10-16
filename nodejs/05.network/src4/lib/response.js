@@ -47,6 +47,7 @@ class Response {
         this.headers = {}
         this.headers["Connection"] = "Close"
         this.headers["Content-Type"] = "text/html; charset=UTF-8"
+        // x-www-form/urlencoded
     }
 
     convertToHttpStartLine() {
