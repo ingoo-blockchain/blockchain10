@@ -1,0 +1,124 @@
+/* Global */
+:root {
+    /* Size */
+    --size-max-width: 900px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Common */
+.section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.max-container {
+    max-width: var(--size-max-width);
+    margin: auto;
+}
+
+/* header */
+
+.nav1 {
+    height: 50px;
+}
+
+.header__container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo__img {
+    width: 70px;
+}
+
+/* board */
+
+.board__title {
+    border-bottom: 1px solid black;
+}
+
+.board__title__etc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.board__content p {
+    line-height: 2;
+}
+
+/* comment */
+
+.comment {
+    border-top: 1px solid black;
+    padding: 1rem;
+}
+
+.comment__write {
+    padding: 15px;
+    display: flex;
+    width: 100%;
+    position: relative; /* 부모 요소로부터의 상대 위치 설정 */
+    background-color: rgba(122, 137, 170, 0.1);
+}
+
+.comment__write::before {
+    content: "";
+    position: absolute; /* 가상 요소의 절대 위치 설정 */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1.5px; /* top border의 높이를 3px로 설정 */
+    background-color: black;
+    pointer-events: none;
+}
+
+.comment__write::after {
+    content: "";
+    position: absolute;
+    top: 1.5px; /* top border 다음부터 시작하도록 설정 */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* 투명한 검은색 또는 회색느낌의 border 설정 */
+    pointer-events: none;
+}
+
+.comment__number {
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.comment__write form {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+.comment__write__input {
+    flex-grow: 1;
+}
+
+.comment__write__register {
+    font-weight: 900;
+    font-size: 1rem;
+    width: 150px;
+    height: 50px;
+}
+
+.comment__view__info {
+    margin-top: 1rem;
+    border-top: 1px solid black;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}

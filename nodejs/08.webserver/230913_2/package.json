@@ -1,0 +1,17 @@
+{
+  "name": "230913_2",
+  "version": "1.0.0",
+  "description": "-   GET /\r -   GET /boards/list\r -   GET /boards/write\r -   GET /boards/view\r -   GET /boards/modify",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nunjucks": "^3.2.4"
+  }
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        {% if user %} 
+            {{user.userid}} 
+            님 환영합니다. <a href="/users/logout">로그아웃</a> 
+        {% else %} 
+            잘되나~?asdf <a href="/users/login">로그인</a>
+        {% endif %}
+    </body>
+</html>

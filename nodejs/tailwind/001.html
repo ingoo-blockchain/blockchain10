@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <body>
+            <!-- 
+            cursor-not-allowed
+            커서가 버튼 위에 있을 때 비활성화된 상태에서 허용되지 않은 커서 모양을 나타냅니다.
+
+            transition duration-150 ease-in-out
+            버튼에 호버 시에 애니메이션 효과를 적용합니다. duration-150은 애니메이션 지속 시간을 150밀리초로 설정하고, ease-in-out은 애니메이션의 시작과 끝 부분을 느리게 변화하도록 지정합니다.
+
+            disabled
+            버튼을 비활성화 상태로 설정합니다.
+
+            ring-1 ring-slate-900/10
+            버튼에 포커스가 갈 때 보이는 링의 스타일을 설정합니다. ring-1은 링의 굵기를 1로 설정하고, ring-slate-900/10은 slate-900 색상의 10% 불투명도로 설정됩니다.
+
+            right-[-5%] top-[-10%]
+            버튼 내의 아이콘을 상대적으로 위치시키는 스타일입니다. right-[-5%]은 오른쪽으로부터 5%만큼 떨어진 위치로, top-[-10%]은 위쪽으로부터 10%만큼 떨어진 위치로 아이콘을 배치합니다.
+
+            mr-1 mt-1
+            아이콘의 오른쪽과 위쪽 마진을 설정합니다. mr-1은 오른쪽 마진을 1의 단위로 설정하고, mt-1은 위쪽 마진을 1의 단위로 설정합니다.
+
+            animate-bounce
+            아이콘에 튕기는 애니메이션 효과를 적용합니다. 아이콘이 튕기면서 주기적으로 움직입니다.
+
+            h-5 w-5
+            아이콘의 높이와 너비를 각각 5의 단위로 설정합니다. 아이콘은 5x5 크기로 표시됩니다.
+
+            bg-sky-400
+            아이콘의 배경색을 sky-400로 설정합니다. 위 속성과 클래스들을 조합하여 버튼과 아이콘이 함께 배치되며, 호버 시에 애니메이션 효과를 보여줍니다.
+                        -mr => -margin-right : 5%, -mt => -margin-top : 5%-->
+
+            <div class="relative overflow-auto rounded-xl p-8">
+                <div class="flex items-center justify-center">
+                    <span class="relative inline-flex">
+                        <button
+                            type="button"
+                            class="inline-flex cursor-not-allowed items-center rounded-md bg-white px-4 py-2 text-sm font-semibold leading-6 text-sky-500 shadow ring-1 ring-slate-900/10 transition duration-150 ease-in-out"
+                            disabled=""
+                        >
+                            Transactions
+                        </button>
+                        <span class="absolute right-[-5%] top-[-10%] -mr-1 -mt-1 flex h-5 w-5">
+                            <span class="absolute inline-flex h-full w-full animate-bounce rounded-full bg-sky-400"></span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </body>
+    </body>
+</html>

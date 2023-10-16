@@ -1,0 +1,15 @@
+{
+  "name": "230912",
+  "version": "1.0.0",
+  "description": "npm 을통해 설치를하고 실행해야하는 외장모듈",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nunjucks": "^3.2.4"
+  }
+}

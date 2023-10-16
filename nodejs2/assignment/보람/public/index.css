@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+#root {
+    width: 100%;
+}
+
+#wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #f5f3ec;
+    height: 100vh;
+}
+
+#input_box {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+#form {
+    margin-top: 20px;
+    background-color: #ede9e0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 14px 7px;
+    border-radius: 5px;
+}
+
+#comment {
+    background-color: #fff;
+    width: 80%;
+    height: 50px;
+    border: none;
+    padding: 14px 7px;
+    border-radius: 5px;
+}
+
+#button {
+    width: 15%;
+    background-color: #80736a;
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+#comment_list {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ede9e0;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 14px;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.comment_row {
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 7px;
+    border-radius: 5px;
+}
+
+.id {
+    width: 10%;
+    text-align: center;
+}
+
+.content {
+    width: 65%;
+}
+
+.date {
+    width: 15%;
+    text-align: center;
+}
+
+.delete {
+    width: 5%;
+    border: none;
+    background-color: #fff;
+    font-size: 1.1rem;
+}
+
+#modifyform {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.editing {
+    width: 80%;
+    background-color: #ede9e0;
+    border: none;
+    height: 30px;
+    padding: 14px 7px;
+    border-radius: 5px;
+}
+
+#modifybtn {
+    width: 15%;
+    border: none;
+    background-color: #80736a;
+    color: #fff;
+    border-radius: 5px;
+}
+
+input[name="comment"]:focus,
+input[name="commentModify"]:focus {
+    outline: none;
+}

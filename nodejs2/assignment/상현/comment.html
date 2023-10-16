@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Com</title>
+    <link rel="stylesheet" href="comment.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="wrap_title">
+        <h2></h2>
+        <div class="login">
+          <a href="">로그인</a>
+          <a href="">회원가입</a>
+        </div>
+      </div>
+      <div id="container">
+        <div id="wrap_body">
+          <div class="imgBody">
+            <img src="./img/franceLyon.jpg" alt="" />
+          </div>
+        </div>
+        <div id="content_wrap">
+          <div class="comLen">
+            <p>의견쓰기</p>
+            <div>
+              <span class="comNum"></span>
+            </div>
+          </div>
+          <ul class="comment_wrap">
+            <li class="commentForm">
+              <form action="" class="commentBox">
+                <span class="commentBox2">
+                  <div><h5>nickname(***)</h5></div>
+                  <textarea
+                    name="comment"
+                    placeholder="주제와 무관한 댓글이나 스포일러, 악플은 경고 없이 삭제됩니다."
+                    id="userComment"
+                  ></textarea>
+                  <button type="button" class="comBTN">등록</button>
+                </span>
+              </form>
+            </li>
+          </ul>
+
+          <!-- {% for row in comments %} -->
+
+          <li id="commentList" class="commentNum commentNum-1">
+            <ul>
+              <div class="commentBody">
+                <span class="userList" onclick="modify(this)"></span>
+              </div>
+            </ul>
+          </li>
+
+          <!-- {% endfor %} -->
+        </div>
+      </div>
+    </div>
+    <script src="./js/comment.js"></script>
+  </body>
+</html>

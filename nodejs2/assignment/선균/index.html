@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>freeboard view</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="./index.css" />
+        <!-- Goggle Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,600;1,400&family=Outfit:wght@500&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/76b94c2aa9.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="header max-container">
+            <nav class="nav1"></nav>
+            <div class="header__container1">
+                <div class="header__logo">
+                    <a href="#"><img class="header__logo__img" src="./images/nate.svg" alt="logo" /></a>
+                </div>
+                <div class="header__search">
+                    <form action="/seatch" method="get">
+                        <input type="search" placeholder="검색어를 입력하세요" /> <input type="submit" value="검색" />
+                    </form>
+                </div>
+            </div>
+            <nav></nav>
+        </header>
+        <main>
+            <section id="board">
+                <div class="board__container max-container">
+                    <div class="board__title">
+                        <h1>헤어졌다 재회했는데...</h1>
+                        <div class="board__title__etc">
+                            <h5>ㅇㅇ 2023.10.12 00:04</h5>
+                            <h5>조회 6,834</h5>
+                        </div>
+                    </div>
+                    <div class="board__content">
+                        <p>
+                            3년7개월정도 사겼어요... 오래만나다보니 대화도 없어지고 서로 폰만 보고 결국 남자친구가 못
+                            참고 헤어지자 해서 헤어졌죠 헤어진 후 저는 매달리거나 잡지 않았어요 그 후 10일정도 있다가
+                            남자친구가 시간되냐고 카페가서 대화하자 하길래 갔는데 뭐 어떻게 대화하다보니 한달정도의
+                            시간을 갖고 재회 할 확신이 생긴다면 만나기로 했죠 그리고 저번주에 다시 만나게 됐어요 저희는
+                            매주 토요일마다 보는데 저번주 토요일에 다음주에는 본인이 목,금연차쓴다면서 평일에 친구가
+                            놀러와 3~4일간 있는다고 못만난다고 하더라구요...우리가 다시 만난지 이제 일주일인데 같이 있는
+                            시간이 중요하잖아요 근데 제가 거기서 뭐라 해봤자 다시 사이만 틀어질 거 같아서 알았다
+                            했습니다
+                        </p>
+                    </div>
+                </div>
+                <div class="comment max-container">
+                    <span class="comment__number">댓글수 ()</span>
+                    <div class="comment__write">
+                        <form action="">
+                            <input class="comment__write__input" type="text" placeholder="댓글을 입력하세요" />
+                            <input class="comment__write__register" type="submit" value="등록" />
+                        </form>
+                    </div>
+                    <div class="comment__view">
+                        <div class="comment__view__info">
+                            <div>
+                                <span class="comment__view__writer">나루토</span>
+                                <span class="comment__view__date">2023.10.15</span>
+                            </div>
+                            <div><button>수정</button><button>삭제</button></div>
+                        </div>
+                        <div class="comment__view__content">
+                            <p>와 고민이 정말 많으시겠어여 ㅠㅠ</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="./comment.js"></script>
+    </body>
+</html>
