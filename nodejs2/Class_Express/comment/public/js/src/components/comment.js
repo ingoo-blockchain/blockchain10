@@ -25,13 +25,34 @@ class Comment extends Component {
     }
 
     insertItem(content){
-        const newState = this.state.comments.push({
-            id:4,
+        const {comments} = this.state
+        const id = comments.length !== 0 ? (comments[comments.length - 1].id + 1) : 1
+
+        comments.push({
+            id,
             userid:'web7722',
             content,
             date:'2023-10-16'
         })
-        this.setState({...this.state, ...newState})
+        const newState = [...comments]
+
+        this.setState({...this.state, comments:[...newState]})
+    }
+
+    deleteItem(id) {
+        const {comments} = this.state
+        const newState = comments.filter(v=> v.id !== id)
+        
+        this.setState({...this.state, comments:[...newState]})
+    }
+
+    updateItem(id, content){
+        const {comments} = this.state
+        const newState = [...comments]
+        
+        const index = newState.findIndex(v=> v.id === parseInt(id))
+        newState[index].content = content
+        this.setState({...this.state, comments:[...newState]})
     }
 
     mounted() {
@@ -41,7 +62,9 @@ class Comment extends Component {
         new CommentForm(formTarget, {length:comments.length, insertItem})
 
         const itemTarget = document.querySelector('.comment-list')
-        new CommentItem(itemTarget, { comments })
+        const deleteItem = this.deleteItem.bind(this)
+        const updateItem = this.updateItem.bind(this)
+        new CommentItem(itemTarget, { comments, deleteItem, updateItem })
     }
     setEvent() {}
 }

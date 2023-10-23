@@ -1,9 +1,8 @@
 import Component from "../../../core/component.js";
 
 class CommentForm extends Component {
-    setup(){
-        console.log(this.props.insertItem)
-    }
+    setup(){}
+    
     template() {
         return `
         <h4>
@@ -12,7 +11,7 @@ class CommentForm extends Component {
         </h4>
         <form id="commentFrm" class="commentFrm">
             <span class="ps_box">
-                <input type="text" placeholder="댓글 내용을 입력해주세요." />
+                <input type="text" name='content' id='content' placeholder="댓글 내용을 입력해주세요." />
             </span>
             <button type="submit" class="btn">등록</button>
         </form>
@@ -27,8 +26,8 @@ class CommentForm extends Component {
 
     handleSubmit(e){
         e.preventDefault()
-        console.log('submit 발동~')
-        this.props.insertItem()
+        const { value:content } = e.target.content
+        this.props.insertItem(content)
     }
 
     setEvent() {
