@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        회원가입!
+        <button>요청!</button>
+    </body>
+    <script type="text/javascript">
+        const btn = document.querySelector("button")
+
+        btn.addEventListener("click", async (e) => {
+            const obj = { userid: "web7722", userpw: "1234" }
+            // const xhr = new XMLHttpRequest()
+            // xhr.open("post", "http://localhost:3000")
+            // xhr.setRequestHeader("Content-Type", "application/json")
+            // xhr.send(JSON.stringify(obj))
+            // xhr.onload = () => {
+            //     console.log(xhr.response)
+            //     console.log("hello world!")
+            // }
+
+            // fetch("http://localhost:3000", {
+            //     method: "POST",
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     body: JSON.stringify(obj),
+            // })
+            //     .then((response) => {
+            //         return response.text()
+            //     })
+            //     .then((text) => {
+            //         console.log(text)
+            //     })
+
+            // const response = await fetch("http://localhost:3000", {
+            //     method: "POST",
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     body: JSON.stringify(obj),
+            // })
+
+            // const data = await response.text()
+
+            // console.log(data)
+            // console.log("hello world!")
+
+            // 요청을 날릴때 application/json
+            // const { data } = await axios.post("http://localhost:3000", obj)
+            // console.log(data)
+
+            const response = await axios({
+                method: "post",
+                url: "http://localhost:3000",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                data: "userid=web7722&userpw=1234",
+            })
+
+            console.log(response)
+        })
+
+        // axios cdn
+    </script>
+</html>
