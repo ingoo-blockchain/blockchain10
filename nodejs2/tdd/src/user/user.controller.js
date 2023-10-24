@@ -5,9 +5,6 @@ exports.create = async (req, res, next) => {
     try {
         const userCreateRequestDTO = new UserCreateRequestDTO(req.body)
         const response = await userService.createUser(userCreateRequestDTO)
-        // if (!(response instanceof UserCreateResponseDTO)) {
-        //     throw new Error('response 받은 내용이 옳바르지 않습니다.')
-        // }
         res.status(201).json(response)
     } catch (e) {
         next(e)
