@@ -1,0 +1,26 @@
+{
+  "name": "tdd",
+  "version": "1.0.0",
+  "description": "Test-Driven-Development 테스트 주도 개발",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "start": "node index",
+    "dev": "node index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "node-mocks-http": "^1.13.0",
+    "supertest": "^6.3.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.2",
+    "sequelize": "^6.33.0"
+  }
+}
