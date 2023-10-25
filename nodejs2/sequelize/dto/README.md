@@ -5,9 +5,12 @@ $ npm init -y
 $ npm install express cors sequelize mysql2 dotenv
 ```
 
-# DTO 
-
 
 
 # TDD
+# KaKao Login
+# Chat
+# Upload 
+
+
 
